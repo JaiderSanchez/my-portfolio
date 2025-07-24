@@ -20,3 +20,23 @@ modal.addEventListener("click", (e) => {
       modal.style.display = "none";
     }
 });
+
+// Código JS para los modales de Detalles de los proyectos
+
+function abrirModal(idModal) {
+  document.getElementById(idModal).style.display = "block";
+}
+
+function cerrarModal(idModal) {
+  document.getElementById(idModal).style.display = "none";
+}
+
+// Cierra el modal al hacer clic fuera de él
+window.onclick = function(event) {
+  const modales = document.querySelectorAll(".modal");
+  modales.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
