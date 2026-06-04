@@ -1,11 +1,15 @@
 body {
   font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
-  font-style: bold;
+  font-style: 400;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #98acb8;
+  background: linear-gradient(
+  180deg,
+  #cde0fd,
+  #d6e1ec
+);
   color: #333;
 }
 
@@ -18,7 +22,11 @@ body {
 }
 
 header {
-  background-color: #007acc;
+  background: linear-gradient(
+    135deg,
+    #007acc,
+    #8bb3f0
+  );
   color: white;
   padding: 2rem;
   text-align: center;
@@ -37,7 +45,7 @@ header {
 }
 
 .foto-perfil:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -65,14 +73,13 @@ header {
   height: auto;
   object-fit: contain;
   border-radius: 6px;
+  transition: transform .3s ease;
 }
 
-
-img {
-    width: 80%;
-    align-items: center;
-    justify-content: center;
+.logos-proyectos img:hover {
+  transform: scale(1.05);
 }
+
 
 header h1 {
   margin-bottom: 0.5rem;
@@ -92,8 +99,7 @@ section {
 }
 
 h3 {
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .contacto li {
@@ -107,6 +113,14 @@ h3 {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all .3s ease;
+}
+
+.proyectos article:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,.15);
 }
 
 
@@ -121,11 +135,13 @@ h3 {
 a {
   color: #007acc;
   text-decoration: none;
+  transition: .3s;
 }
 
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+   color: #005fa3;
 }
 
 
@@ -166,24 +182,31 @@ a:hover {
   font-size: 0.95rem;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, transform 0.3s ease;
+  cursor: default;
 }
 
 .lista-habilidades span:hover {
   background-color: #0077cc;
   color: white;
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #eee;
-  color: #555;
+  background: linear-gradient(
+    135deg,
+    #007acc,
+    #3d89fa
+  );
+  color: white;
   border: black;
 }
 
 
+
+/* Estilos y diseños para los modales */
 .modal {
   display: none; 
   position: fixed;
@@ -216,6 +239,47 @@ footer {
 }
 
 
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cerrar {
+  float: right;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 600px) {
+  .modal-contenido {
+    margin: 15% auto;
+    width: 90%;
+    padding: 1.2rem;
+  }
+}
+
+
+
 /* Lista de habilidades */
 
 .lista-habilidades {
@@ -235,15 +299,17 @@ footer {
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  cursor: default;
 }
 
 .habilidad:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
 .habilidad img {
-  width: 100px;
-  height: 100px;
+  width: clamp(70px, 8vw, 100px);
+  height: clamp(70px, 8vw, 100px);
   object-fit: contain;
   margin-bottom: 8px;
 }
@@ -286,47 +352,6 @@ ion-icon {
 }
 
 
-
-/* Estilos y diseños para los modales */
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding: 1rem;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-contenido {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.cerrar {
-  float: right;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
-
-/* Responsive para móviles */
-@media screen and (max-width: 600px) {
-  .modal-contenido {
-    margin: 30% 1rem;
-    padding: 1.2rem;
-  }
-}
-
 .btn-detalles {
   margin-top: 1rem;
   background-color: #007bff;
@@ -335,9 +360,23 @@ ion-icon {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all .3s ease;
 }
 
 .btn-detalles:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
+
+.btn-detalles:focus {
+  outline: 3px solid #80bdff;
+}
+
+/* LISTA DE MEJORAS PARA EL FUTURO */
+/* Dark Mode (futuro) */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+} */
