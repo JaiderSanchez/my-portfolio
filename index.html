@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Jaider Sánchez</title>
+    <title>Jaider Sánchez | Desarrollador Web Full Stack</title>
+    <meta name="description" content="Portafolio de Jaider Sánchez, desarrollador web Full Stack. Conoce sus proyectos con Laravel, Angular, JavaScript y PostgreSQL.">
     <link rel="stylesheet" href="styles.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,21 +17,22 @@
     <header>
         <h1>Jaider Fabián Sánchez Delgado</h1>
 
-        <img src="img/foto-perfil.jpeg" class="foto-perfil" alt="">
+        <img src="img/foto-perfil.jpeg" class="foto-perfil" alt="Fotografía de Jaider Sánchez">
 
         <p class="introduccion">Desarrollador web full-stack en formación con experiencia en proyectos reales del SENA Casanare. Manejo frameworks modernos, bases de datos y control de versiones con GitHub.</p>
 
-        <p class="nota-importante"> <ion-icon name="phone-portrait"></ion-icon> *NOTA IMPORTANTE: Podrás ver mi portafolio también en dispositivos móviles.</p>
+        <p class="nota-importante"> <ion-icon name="phone-portrait" aria-hidden="true"></ion-icon> *NOTA IMPORTANTE: Podrás ver mi portafolio también en dispositivos móviles.</p>
     </header>
 
+    <main id="contenido-principal">
     <section class="contacto">
         <h2>Contacto</h2>
         <ul>
-            <li><ion-icon name="location"></ion-icon> <strong>Ubicación:</strong> Yopal, Casanare, Colombia</li>
-            <li><ion-icon name="mail"></ion-icon> <strong>Email:</strong> jaiderfabiansd@gmail.com</li>
-            <li><ion-icon name="call"></ion-icon> <strong>Teléfono:</strong><a href="https://wa.me/573228758896?text=Hola%20Jaider,%20vi%20tu%20portafolio%20web%20y%20me%20gustaría%20contactarte." target="_blank"> 3228758896</a></li>
-            <li><ion-icon name="logo-github"></ion-icon> <strong>GitHub:</strong> 
-            <a href="https://github.com/JaiderSanchez" target="_blank">JaiderSanchez</a>
+            <li><ion-icon name="location" aria-hidden="true"></ion-icon> <strong>Ubicación:</strong> Yopal, Casanare, Colombia</li>
+            <li><ion-icon name="mail" aria-hidden="true"></ion-icon> <strong>Email:</strong> <a href="mailto:jaiderfabiansd@gmail.com">jaiderfabiansd@gmail.com</a></li>
+            <li><ion-icon name="call" aria-hidden="true"></ion-icon> <strong>Teléfono:</strong><a href="https://wa.me/573228758896?text=Hola%20Jaider,%20vi%20tu%20portafolio%20web%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer"> 3228758896</a></li>
+            <li><ion-icon name="logo-github" aria-hidden="true"></ion-icon> <strong>GitHub:</strong> 
+            <a href="https://github.com/JaiderSanchez" target="_blank" rel="noopener noreferrer">JaiderSanchez</a>
             </li>
         </ul>
     </section>
@@ -49,9 +51,9 @@
 
             <p><strong>Tecnologías:</strong> Laravel, PHP, PostgreSQL, Bootstrap, Bulma</p>
 
-            <a href="https://github.com/Sebas2021herrera/ControlE" target="_blank">Ver repositorio</a>
+            <a href="https://github.com/Sebas2021herrera/ControlE" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
 
-            <button class="btn-detalles" onclick="abrirModal('modal-control-e')">Ver más detalles</button>
+            <button type="button" class="btn-detalles" aria-controls="modal-control-e" onclick="abrirModal('modal-control-e')">Ver más detalles</button>
 
         </article>
 
@@ -83,11 +85,11 @@
             <p><strong>Tecnologías:</strong> Angular 19, Gin, PostgreSQL y PWA</p>
 
             <ul>
-                <li><a href="https://github.com/JaiderSanchez/CLIENT_R_C" target="_blank">Frontend (privado)</a></li>
-                <li><a href="https://github.com/JaiderSanchez/API_MID_R_C" target="_blank">API Middleware (privado)</a></li>
-                <li><a href="https://github.com/JaiderSanchez/API_CRUD_R_C_GO" target="_blank">API CRUD (privado)</a></li>
+                <li><a href="https://github.com/JaiderSanchez/CLIENT_R_C" target="_blank" rel="noopener noreferrer">Frontend (privado)</a></li>
+                <li><a href="https://github.com/JaiderSanchez/API_MID_R_C" target="_blank" rel="noopener noreferrer">API Middleware (privado)</a></li>
+                <li><a href="https://github.com/JaiderSanchez/API_CRUD_R_C_GO" target="_blank" rel="noopener noreferrer">API CRUD (privado)</a></li>
             </ul>
-            <button class="btn-detalles" onclick="abrirModal('modal-canchas')">Ver más detalles</button>
+            <button type="button" class="btn-detalles" aria-controls="modal-canchas" onclick="abrirModal('modal-canchas')">Ver más detalles</button>
         </article>
 
 
@@ -115,8 +117,8 @@
             
             <p>Programa en Golang para generar facturas en formato PDF para un minimarket. Usa la librería gofpdf.</p>
 
-            <a href="https://github.com/JaiderSanchez/Programa-Generador-Factura-PDF-Golang/tree/desarrollo-factura" target="_blank">Ver repositorio</a>
-            <button class="btn-detalles" onclick="abrirModal('modal-factura')">Ver más detalles</button>
+            <a href="https://github.com/JaiderSanchez/Programa-Generador-Factura-PDF-Golang/tree/desarrollo-factura" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+            <button type="button" class="btn-detalles" aria-controls="modal-factura" onclick="abrirModal('modal-factura')">Ver más detalles</button>
         </article>
 
 
@@ -146,9 +148,9 @@
 
           <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript y CDN Icons.</p>
 
-          <a href="https://jaidersanchez.github.io/encuentro-con-la-verdad/" target="_blank">Ver repositorio</a>
+          <a href="https://jaidersanchez.github.io/encuentro-con-la-verdad/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
 
-          <button class="btn-detalles" onclick="abrirModal('modal-encuentro-verdad')">Ver más detalles</button>
+          <button type="button" class="btn-detalles" aria-controls="modal-encuentro-verdad" onclick="abrirModal('modal-encuentro-verdad')">Ver más detalles</button>
         </article>
 
         
@@ -171,7 +173,7 @@
     </section>
 
     <section id="habilidades">
-        <h2><ion-icon name="star-half"></ion-icon>Habilidades</h2>
+        <h2><ion-icon name="star-half" aria-hidden="true"></ion-icon>Habilidades</h2>
         <p class="descripcion-habilidades">
             Soy tecnólogo en formación en Análisis y Desarrollo de Software, con capacidad para optimizar procesos tecnológicos y organizacionales mediante soluciones TIC. Me desempeño como desarrollador web full stack junior, con conocimientos sólidos en <strong>JavaScript</strong>, <strong>TypeScript</strong>, <strong>Go</strong> y <strong>PHP</strong>. Tengo experiencia práctica con frameworks modernos como <strong>Angular (v19)</strong>, <strong>Laravel (v11.26)</strong> y <strong>Gin</strong>, y administro bases de datos relacionales con <strong>PostgreSQL</strong>. Utilizo <strong>Git Bash</strong> y <strong>GitHub</strong> para control de versiones y trabajo colaborativo, aplicando metodologías <strong>ágiles</strong> orientadas a la entrega continua de valor.
 
@@ -245,30 +247,26 @@
     <span>CSS</span>
   </div>
 </div>
-
+    </section>
 
 <section class="en-progreso">
-  <h2><ion-icon name="flash"></ion-icon>Aprendizaje en progreso</h2>
+  <h2><ion-icon name="flash" aria-hidden="true"></ion-icon>Aprendizaje en progreso</h2>
   <div class="lista-habilidades">
     <div class="habilidad">
       <img src="img/logos/node-and-express-js.png" alt="Node.js logo">
       <span>Node.js y Express.js</span>
     </div>
-    <!-- <div class="habilidad">
-      <img src="img/logos/express.png" alt="Express.js logo">
-      <span>Express.js</span>
-    </div> -->
     <div class="habilidad">
       <img src="img/logos/react.png" alt="React logo">
       <span>React</span>
     </div>
     <div class="habilidad">
-      <img src="img/logos/flutter.png" alt="Node.js logo">
+      <img src="img/logos/flutter.png" alt="Logo de Flutter">
       <span>Flutter</span>
     </div>
   </div>
 </section>
-
+    </main>
 
   <footer>
     <p>&copy; 2026 Jaider Sánchez. Portafolio personal.</p>
@@ -282,8 +280,8 @@
 
 <script src="script.js"></script>
 
-<script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
-<script  nomodule  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " > </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
