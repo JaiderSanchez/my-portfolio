@@ -1,382 +1,594 @@
+/* =========================================================
+   PORTAFOLIO WEB | Estilos principales
+   Tipografía: Public Sans (cargada desde index.html)
+   ========================================================= */
+
+/* 1. Variables y estilos generales */
+:root {
+  --color-fondo: #f3f6fb;
+  --color-superficie: #ffffff;
+  --color-superficie-suave: #f8faff;
+  --color-texto: #152238;
+  --color-texto-secundario: #526176;
+  --color-primario: #2563eb;
+  --color-primario-oscuro: #1d4ed8;
+  --color-borde: #dce5f0;
+  --sombra-suave: 0 10px 30px rgba(18, 38, 63, 0.06);
+  --sombra-elevada: 0 18px 40px rgba(18, 38, 63, 0.12);
+  --radio-tarjeta: 18px;
+  --ancho-contenido: 1120px;
+}
+
+/* Reset básico -> Basic reset */ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Con: content-box,  el width solo incluye el contenido. El padding y el borde se suman. -> With 'content-box', the 'width' includes only the content. Padding and border are added on top.*/
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
+  margin: 0; /* Ningún margen exterior, para que la página empiece desde los bordes -> No outer margin, so that the page begins at the edges */
+  min-width: 280px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   font-family: "Public Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: 400;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: linear-gradient(
-  180deg,
-  #cde0fd,
-  #d6e1ec
-);
-  color: #333;
+  line-height: 1.65;
 }
 
-.introduccion{
-    color: black;
-}
 
-.nota-importante{
-    font-size: small;
-}
-
-header {
-  background: linear-gradient(
-    135deg,
-    #007acc,
-    #8bb3f0
-  );
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.foto-perfil {
-  width: 200px;
-  height: 265px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 3px solid #0a0a0a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+img {
   display: block;
-  margin: 20px auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.foto-perfil:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-
-
-.logos-proyectos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.logos-proyectos:hover {
-  transform: scale(1.03);
-}
-
-.logos-proyectos img {
   max-width: 100%;
-  width: 280px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 6px;
-  transition: transform .3s ease;
-}
-
-.logos-proyectos img:hover {
-  transform: scale(1.05);
 }
 
 
-header h1 {
-  margin-bottom: 0.5rem;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
 
-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-
-.contacto ul {
-  list-style: none;
-  padding: 0;
-}
-
+h1,
+h2,
 h3 {
-    text-align: center;
-}
-
-.contacto li {
-  margin-bottom: 0.3rem;
+  line-height: 1.25;
 }
 
 
-.proyectos article {
-  background-color: white;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: all .3s ease;
-}
-
-.proyectos article:hover {
-  transform: translateY(-8px);
-
-  box-shadow:
-    0 12px 25px rgba(0,0,0,.15);
-}
-
-
-.proyectos img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+p,
+li {
+  overflow-wrap: break-word;
 }
 
 
 a {
-  color: #007acc;
-  text-decoration: none;
-  transition: .3s;
+  color: var(--color-primario-oscuro);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 
 a:hover {
-  /* text-decoration: underline; */
-   color: #005fa3;
+  color: #143db1;
 }
 
 
+a:focus-visible,
+button:focus-visible,
+.cerrar:focus-visible,
+.modal-close:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
-#habilidades {
-  padding: 50px 20px;
-  background-color: #f4f4f4;
+
+/* 2. Encabezado y presentación */
+header {
+  padding: clamp(3rem, 7vw, 5.5rem) 1rem;
   text-align: center;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(96, 165, 250, 0.25), transparent 35%),
+    linear-gradient(135deg, #0c1b32 0%, #173b69 100%);
 }
 
-#habilidades h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #222;
-  font-family: "Bungee", sans-serif;
+
+header h1 {
+  max-width: 850px;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(2rem, 4.8vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
 
+
+.foto-perfil {
+  width: clamp(170px, 22vw, 210px);
+  aspect-ratio: 4 / 5;
+  height: auto;
+  margin: 0 auto 1.75rem;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 200ms ease;
+}
+
+
+.foto-perfil:hover {
+  transform: translateY(-4px);
+}
+
+
+.introduccion {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  color: #e2ecff;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+}
+
+
+.nota-importante {
+  display: inline-block;
+  max-width: 720px;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #dbeafe;
+  font-size: 0.85rem;
+}
+
+
+.nota-importante ion-icon {
+  color: inherit;
+}
+
+
+/* 3. Contenido y títulos de secciones */
+main > section {
+  width: min(var(--ancho-contenido), calc(100% - 2rem));
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto;
+}
+
+
+main h2 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+
+main h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 0.6rem;
+  border-radius: 999px;
+  background-color: var(--color-primario);
+}
+
+
+.contacto,
+#habilidades,
+.en-progreso {
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra-suave);
+}
+
+
+/* 4. Contacto */
+.contacto ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.contacto li {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  background-color: var(--color-superficie-suave);
+  overflow-wrap: anywhere;
+}
+
+
+.contacto li strong {
+  margin-right: 0.25rem;
+}
+
+
+/* 5. Proyectos: tarjetas adaptables */
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+
+.proyectos > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+
+.proyectos article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.25rem, 2.6vw, 1.75rem);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra-suave);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+
+.proyectos article:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-elevada);
+}
+
+
+.proyectos article h3 {
+  margin-bottom: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+
+.proyectos article p {
+  margin-bottom: 1rem;
+  color: var(--color-texto-secundario);
+}
+
+
+.proyectos article p strong {
+  color: var(--color-texto);
+}
+
+
+.proyectos article ul {
+  padding-left: 1.25rem;
+}
+
+
+.proyectos article a {
+  font-weight: 650;
+}
+
+
+.logos-proyectos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid #eef2f8;
+  border-radius: 14px;
+  background-color: var(--color-superficie-suave);
+}
+
+
+.logos-proyectos img,
+.proyectos .logos-proyectos img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 128px;
+  margin: 0;
+  object-fit: contain;
+}
+
+
+.btn-detalles {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0.8rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: var(--color-primario);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+
+.btn-detalles:hover {
+  background-color: var(--color-primario-oscuro);
+  transform: translateY(-2px);
+}
+
+
+/* Deja aire entre el enlace y el botón de detalles. */
+.proyectos article > a,
+.proyectos article > ul {
+  margin-bottom: 1.2rem;
+}
+
+
+/* 6. Habilidades y tecnologías en aprendizaje */
 .descripcion-habilidades {
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  max-width: 850px;
+  margin: 0 0 1.75rem;
+  color: var(--color-texto-secundario);
 }
+
 
 .lista-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 0.9rem;
+}
+
+
+.habilidad {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.lista-habilidades span {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.3s ease;
-  cursor: default;
-}
-
-.lista-habilidades span:hover {
-  background-color: #0077cc;
-  color: white;
-  transform: translateY(-3px);
-}
-
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: linear-gradient(
-    135deg,
-    #007acc,
-    #3d89fa
-  );
-  color: white;
-  border: black;
-}
-
-
-
-/* Estilos y diseños para los modales */
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 140px;
+  padding: 1rem 0.7rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  background-color: var(--color-superficie-suave);
+  text-align: center;
+  transition: transform 200ms ease, border-color 200ms ease;
 }
 
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+
+.habilidad:hover {
+  transform: translateY(-3px);
+  border-color: #93b4fc;
+}
+
+
+.habilidad img,
+.en-progreso .habilidad img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.8rem;
+  object-fit: contain;
+}
+
+
+.habilidad span {
+  color: var(--color-texto);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+
+.en-progreso {
+  background-color: #fafdff;
+}
+
+
+/* 7. Íconos */
+ion-icon {
+  margin-right: 0.4rem;
+  color: var(--color-primario);
+  font-size: 1.15em;
+  vertical-align: -0.15em;
+}
+
+
+/* 8. Modales: conserva compatibilidad con el JavaScript actual */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: rgba(9, 20, 38, 0.78);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal-contenido {
+  width: min(100%, 650px);
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: clamp(1.2rem, 4vw, 2rem);
+  overflow-y: auto;
+  border-radius: 18px;
+  background-color: var(--color-superficie);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  animation: aparecer 250ms ease;
+}
+
+
+.modal-contenido h3 {
+  margin: 0 0 1.25rem;
+  font-size: 1.4rem;
+}
+
+
+.modal-contenido ul {
+  padding-left: 1.25rem;
+}
+
+
+.modal-contenido li + li {
+  margin-top: 0.75rem;
+}
+
+
+.cerrar {
+  float: right;
+  margin: -0.5rem -0.3rem 0.2rem 0.9rem;
+  color: var(--color-texto-secundario);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+.cerrar:hover {
+  color: var(--color-texto);
+}
+
+
+/* Visor para imágenes ampliadas */
+.modal > img {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  max-height: 85vh;
+  max-height: 85dvh;
+  margin: auto;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 1rem;
+  right: 1.5rem;
+  color: #ffffff;
   font-size: 2rem;
-  color: white;
+  line-height: 1;
   cursor: pointer;
   user-select: none;
 }
 
 
-.modal-contenido {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  animation: aparecer 0.3s ease;
-}
-
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-12px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.cerrar {
-  float: right;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
 
-/* Responsive para móviles */
-@media screen and (max-width: 600px) {
-  .modal-contenido {
-    margin: 15% auto;
-    width: 90%;
-    padding: 1.2rem;
-  }
-}
-
-
-
-/* Lista de habilidades */
-
-.lista-habilidades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.habilidad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-  cursor: default;
-}
-
-.habilidad:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-
-.habilidad img {
-  width: clamp(70px, 8vw, 100px);
-  height: clamp(70px, 8vw, 100px);
-  object-fit: contain;
-  margin-bottom: 8px;
-}
-
-.habilidad span {
-  font-size: 0.9rem;
-  color: #333;
-  font-weight: 500;
-}
-
-/* Fondo distinto para la sección "En progreso" */
-
-.en-progreso {
-  padding: 50px 20px;
-  background-color: #fefefe;
+/* 9. Pie de página */
+footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background-color: #0c1b32;
+  color: #dbeafe;
   text-align: center;
 }
 
-.en-progreso img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 8px;
-}
 
-.en-progreso h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #222;
-  font-family: "Bungee", sans-serif;
-}
-
-/* Íconos */
-
-ion-icon {
-  color: #4A4A4A;
-  font-size: 1.2em;
-  vertical-align: middle;
-  margin-right: 5px;
+footer p {
+  margin: 0;
 }
 
 
-.btn-detalles {
-  margin-top: 1rem;
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.btn-detalles:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.btn-detalles:focus {
-  outline: 3px solid #80bdff;
-}
-
-/* LISTA DE MEJORAS PARA EL FUTURO */
-/* Dark Mode (futuro) */
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #f5f5f5;
+/* 10. Responsive */
+@media (max-width: 760px) {
+  .contacto ul,
+  .proyectos {
+    grid-template-columns: 1fr; /* Esto hace que las tarjetas de proyectos se muestren en una sola columna cuando la pantalla tiene 760 píxeles de ancho o menos. -> This causes the project cards to be displayed in a single column when the screen is 760 pixels wide or less. */
   }
-} */
+
+  .proyectos {
+    gap: 1rem;
+  }
+
+  .lista-habilidades {
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  }
+}
+
+
+@media (max-width: 480px) {
+  header {
+    padding: 2.8rem 1rem;
+  }
+
+  main > section {
+    width: calc(100% - 1.25rem);
+    margin-block: 1.25rem;
+  }
+
+  .contacto,
+  #habilidades,
+  .en-progreso {
+    padding: 1.25rem;
+  }
+
+  .nota-importante {
+    border-radius: 14px;
+  }
+
+  .lista-habilidades {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .habilidad {
+    min-height: 125px;
+  }
+
+  .modal {
+    padding: 0.75rem;
+  }
+
+  .modal-contenido {
+    max-height: calc(100dvh - 1.5rem);
+  }
+}
+
+
+/* Respetar las preferencias de usuarios sensibles al movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
