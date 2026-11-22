@@ -1,42 +1,62 @@
-const modal = document.getElementById("modal-img");
-const modalImg = document.getElementById("modal-img-content");
-const modalClose = document.getElementById("modal-close");
 
-document.querySelectorAll(".logos-proyectos img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-});
-});
-
-modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
-});
-
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-});
-
-// Código JS para los modales de Detalles de los proyectos
-
-function abrirModal(idModal) {
-  document.getElementById(idModal).style.display = "block";
-}
+// Visor de imágenes de los proyectos.
+const modalImagen = document.getElementById("modal-img");
+const imagenAmpliada = document.getElementById("modal-img-content");
+const botonCerrarImagen = document.getElementById("modal-close");
+let elementoAnterior = null;
 
 function cerrarModal(idModal) {
-  document.getElementById(idModal).style.display = "none";
+  const modal = document.getElementById(idModal);
+  if (!modal) return;
+
+  modal.style.display = "none";
+
+  if (idModal === "modal-img" && imagenAmpliada) {
+    imagenAmpliada.removeAttribute("src");
+  }
+
+  if (elementoAnterior instanceof HTMLElement) {
+    elementoAnterior.focus();
+    elementoAnterior = null;
+  }
 }
 
-// Cierra el modal al hacer clic fuera de él
-window.onclick = function(event) {
-  const modales = document.querySelectorAll(".modal");
-  modales.forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+function abrirModal(idModal) {
+  const modal = document.getElementById(idModal);
+  if (!modal) return;
+
+  elementoAnterior = document.activeElement;
+  modal.style.display = "block";
+}
+
+if (modalImagen && imagenAmpliada) {
+  document.querySelectorAll(".logos-proyectos img").forEach((imagen) => {
+    imagen.addEventListener("click", () => {
+      elementoAnterior = document.activeElement;
+      imagenAmpliada.src = imagen.src;
+      imagenAmpliada.alt = imagen.alt;
+      modalImagen.style.display = "flex";
+    });
   });
-};
+
+  botonCerrarImagen?.addEventListener("click", () => {
+    cerrarModal("modal-img");
+  });
+}
+
+// Cerrar cualquier modal al pulsar fuera de su contenido.
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (evento) => {
+    if (evento.target === modal) cerrarModal(modal.id);
+  });
+});
+
+// Cerrar con Escape el modal que esté abierto.
+document.addEventListener("keydown", (evento) => {
+  if (evento.key !== "Escape") return;
+
+  const modalAbierto = [...document.querySelectorAll(".modal")]
+    .find((modal) => getComputedStyle(modal).display !== "none");
+
+  if (modalAbierto) cerrarModal(modalAbierto.id);
+});
