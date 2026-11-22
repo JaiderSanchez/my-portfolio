@@ -1,290 +1,623 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaider Sánchez | Desarrollador Web Full Stack</title>
-
-    <meta name="description" content="Portafolio de Jaider Sánchez, desarrollador web Full Stack. Conoce sus proyectos con Laravel, Angular, JavaScript y PostgreSQL.">
-
-    <link rel="stylesheet" href="styles.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- 
-</head>
-
-<body>
-
-    <header>
-        <h1>Jaider Fabián Sánchez Delgado</h1>
-
-        <img src="img/foto-perfil.jpeg" class="foto-perfil" alt="Fotografía de Jaider Sánchez">
-
-        <p class="introduccion">Desarrollador web full-stack en formación con experiencia en proyectos reales del SENA Casanare. Manejo frameworks modernos, bases de datos y control de versiones con GitHub.</p>
-
-        <p class="nota-importante"> <ion-icon name="phone-portrait" aria-hidden="true"></ion-icon> *NOTA IMPORTANTE: Podrás ver mi portafolio también en dispositivos móviles.</p>
-    </header>
-
-    <main id="contenido-principal">
-    <section class="contacto">
-        <h2>Contacto</h2>
-        <ul>
-            <li><ion-icon name="location" aria-hidden="true"></ion-icon> <strong>Ubicación:</strong> Yopal, Casanare, Colombia</li>
-            <li><ion-icon name="mail" aria-hidden="true"></ion-icon> <strong>Email:</strong> <a href="mailto:jaiderfabiansd@gmail.com">jaiderfabiansd@gmail.com</a></li>
-            <li><ion-icon name="call" aria-hidden="true"></ion-icon> <strong>Teléfono:</strong><a href="https://wa.me/573228758896?text=Hola%20Jaider,%20vi%20tu%20portafolio%20web%20y%20me%20gustaría%20contactarte." target="_blank" rel="noopener noreferrer"> 3228758896</a></li>
-            <li><ion-icon name="logo-github" aria-hidden="true"></ion-icon> <strong>GitHub:</strong> 
-            <a href="https://github.com/JaiderSanchez" target="_blank" rel="noopener noreferrer">JaiderSanchez</a>
-            </li>
-        </ul>
-    </section>
-
-    <section class="proyectos">
-        <h2>Proyectos destacados</h2>
-
-        <article>
-            <h3>Control E</h3>
-
-            <div class="logos-proyectos">
-                <img src="img/Logo-Control-E.png" alt="Control E" />
-            </div>
-           
-            <p>Aplicación web desarrollada durante el programa Apoyo de Monitorías para gestionar el ingreso y egreso de elementos en el SENA Regional Casanare.</p>
-
-            <p><strong>Tecnologías:</strong> Laravel, PHP, PostgreSQL, Bootstrap, Bulma</p>
-
-            <a href="https://github.com/Sebas2021herrera/ControlE" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
-
-            <button type="button" class="btn-detalles" aria-controls="modal-control-e" onclick="abrirModal('modal-control-e')">Ver más detalles</button>
-
-        </article>
-
-
-        <!-- Modal oculto por defecto -->
-        <div id="modal-control-e" class="modal">
-          <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal('modal-control-e')">&times;</span>
-            <h3>Control E - Detalles del Proyecto</h3>
-            <ul>
-              <li><strong>Rol:</strong> Desarrollador backend y soporte en frontend</li>
-              <li><strong>Duración:</strong> Julio 2024 - Enero 2025</li>
-              <li><strong>Mayor desafío:</strong> Garantizar la integridad del proceso de registro de elementos en tiempo real y adaptar funcionalidades a requisitos institucionales.</li>
-              <li><strong>Lecciones aprendidas:</strong> Trabajo colaborativo, control de versiones en equipo, despliegue en servidor físico.</li>
-            </ul>
-          </div>
-        </div>
-
-
-        <article>
-            <h3>Sistema de alquiler de canchas</h3>
-
-            <div class="logos-proyectos">
-                <img src="img/Logotipo-proyecto-RC.png" alt="Sistema de alquiler de canchas" />
-            </div>
-            
-            <p>Proyecto de grado desarrollado con arquitectura de 3 capas (Frontend, API Middleware, API REST CRUD) para la gestión de reservas de canchas de fútbol sintéticas.</p>
-
-            <p><strong>Tecnologías:</strong> Angular 19, Gin, PostgreSQL y PWA</p>
-
-            <ul>
-                <li><a href="https://github.com/JaiderSanchez/CLIENT_R_C" target="_blank" rel="noopener noreferrer">Frontend (privado)</a></li>
-                <li><a href="https://github.com/JaiderSanchez/API_MID_R_C" target="_blank" rel="noopener noreferrer">API Middleware (privado)</a></li>
-                <li><a href="https://github.com/JaiderSanchez/API_CRUD_R_C_GO" target="_blank" rel="noopener noreferrer">API CRUD (privado)</a></li>
-            </ul>
-            <button type="button" class="btn-detalles" aria-controls="modal-canchas" onclick="abrirModal('modal-canchas')">Ver más detalles</button>
-        </article>
-
-
-        <!-- Modal oculto por defecto -->
-        <div id="modal-canchas" class="modal">
-          <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal('modal-canchas')">&times;</span>
-            <h3>Sistema de alquiler de canchas - Detalles del Proyecto</h3>
-            <ul>
-              <li><strong>Rol:</strong> Desarrollador web full stack</li>
-              <li><strong>Duración:</strong>Febrero 2025 - Junio 2025</li>
-              <li><strong>Mayor desafío:</strong> Aprender a conectar las 3 capas y aprender a enviar peticiones HTTP. También, la conversión de la app web a una PWA.</li>
-              <li><strong>Lecciones aprendidas:</strong>Desarrollo Full Stack, diseño UX/UI, metodología ágil Scrum y pruebas de APis REST CRUD con Postman</li>
-            </ul>
-          </div>
-        </div>
-
-        
-        <article>
-            <h3>Generador de facturas en PDF</h3>
-
-            <div class="logos-proyectos">
-                <img src="img/pdf-golang.png" alt="Factura PDF Golang" />
-            </div>
-            
-            <p>Programa en Golang para generar facturas en formato PDF para un minimarket. Usa la librería gofpdf.</p>
-
-            <a href="https://github.com/JaiderSanchez/Programa-Generador-Factura-PDF-Golang/tree/desarrollo-factura" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
-            <button type="button" class="btn-detalles" aria-controls="modal-factura" onclick="abrirModal('modal-factura')">Ver más detalles</button>
-        </article>
-
-
-        <!-- Modal oculto por defecto -->
-        <div id="modal-factura" class="modal">
-          <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal('modal-factura')">&times;</span>
-            <h3>Generador de facturas en PDF - Detalles del Proyecto</h3>
-            <ul>
-              <li><strong>Rol:</strong> Desarrollador backend y soporte en frontend</li>
-              <li><strong>Duración:</strong> Agosto 2024 - Febrero 2025</li>
-              <li><strong>Mayor desafío:</strong> Garantizar la integridad del proceso de registro de elementos en tiempo real y adaptar funcionalidades a requisitos institucionales.</li>
-              <li><strong>Lecciones aprendidas:</strong> Trabajo colaborativo, control de versiones en equipo, despliegue en servidor físico.</li>
-            </ul>
-          </div>
-        </div>
-
-
-        <article>
-          <h3>Encuentro con la verdad</h3>
-
-          <div class="logos-proyectos">
-              <img src="img/logo-encuentro-verdad-png.png" alt="Encuentro con la verdad" />
-          </div>
-           
-          <p>Una app web que acercará a Dios a muchas personas ateas, escépticas y que tienen un corazón duro. Sin imponer, sin obligar y sin ninguna mala intención, pero sí hablando con la verdad.</p>
-
-          <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript y CDN Icons.</p>
-
-          <a href="https://jaidersanchez.github.io/encuentro-con-la-verdad/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
-
-          <button type="button" class="btn-detalles" aria-controls="modal-encuentro-verdad" onclick="abrirModal('modal-encuentro-verdad')">Ver más detalles</button>
-        </article>
-
-        
-        <!-- Modal oculto por defecto -->
-        <div id="modal-encuentro-verdad" class="modal">
-          <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal('modal-encuentro-verdad')">&times;</span>
-            <h3>Encuentro con la verdad - Detalles del Proyecto</h3>
-            <ul>
-              <li><strong>Rol:</strong> Desarrollador frontend</li>
-              <li><strong>Duración:</strong> Abril 2026 - Presente</li>
-              <li><strong>Mayor desafío:</strong> Que seres humanos ateos y con corazón duro reciban a Jesús como su Señor y Salvador.</li>
-              <li><strong>Lecciones aprendidas:</strong> Diseño UX/UI y comunicación efectiva de conocimientos bíblicos.</li>
-            </ul>
-          </div>
-        </div>
-
-
-
-    </section>
-
-    <section id="habilidades">
-        <h2><ion-icon name="star-half" aria-hidden="true"></ion-icon>Habilidades</h2>
-        <p class="descripcion-habilidades">
-            Soy tecnólogo en formación en Análisis y Desarrollo de Software, con capacidad para optimizar procesos tecnológicos y organizacionales mediante soluciones TIC. Me desempeño como desarrollador web full stack junior, con conocimientos sólidos en <strong>JavaScript</strong>, <strong>TypeScript</strong>, <strong>Go</strong> y <strong>PHP</strong>. Tengo experiencia práctica con frameworks modernos como <strong>Angular (v19)</strong>, <strong>Laravel (v11.26)</strong> y <strong>Gin</strong>, y administro bases de datos relacionales con <strong>PostgreSQL</strong>. Utilizo <strong>Git Bash</strong> y <strong>GitHub</strong> para control de versiones y trabajo colaborativo, aplicando metodologías <strong>ágiles</strong> orientadas a la entrega continua de valor.
-
-            También he participado en el desarrollo de aplicaciones web reales para el <strong>SENA Regional Casanare</strong>, como una plataforma de control de ingreso y otra de gestión de alquiler de canchas con arquitectura de tres capas. <br><br>
-            Manejo buen <strong>inglés técnico</strong> en desarrollo de software.
-        </p>
-
-  <div class="lista-habilidades">
-  <div class="habilidad">
-    <img src="img/logos/javascript.png" alt="JavaScript logo">
-    <span>JavaScript</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/typescript.png" alt="TypeScript logo">
-    <span>TypeScript</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/golang.png" alt="Go logo">
-    <span>Go</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/php.png" alt="PHP logo">
-    <span>PHP</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/angular.png" alt="Angular logo">
-    <span>Angular</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/laravel.png" alt="Laravel logo">
-    <span>Laravel</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/gin.jpeg" alt="Gin logo">
-    <span>Gin</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/postgresql.png" alt="PostgreSQL logo">
-    <span>PostgreSQL</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/pgadmin.png" alt="pgAdmin logo">
-    <span>pgAdmin 4</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/git-bash.jpeg" alt="Git Bash logo">
-    <span>Git Bash</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/github.png" alt="GitHub logo">
-    <span>GitHub</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/scrum.jpg" alt="Scrum logo">
-    <span>Scrum</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/figma.png" alt="Figma logo">
-    <span>Figma</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/postman.png" alt="Postman logo">
-    <span>Postman</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/HTML5.png" alt="HTML logo">
-    <span>HTML</span>
-  </div>
-  <div class="habilidad">
-    <img src="img/logos/css.png" alt="CSS logo">
-    <span>CSS</span>
-  </div>
-</div>
-    </section>
-
-<section class="en-progreso">
-  <h2><ion-icon name="flash" aria-hidden="true"></ion-icon>Aprendizaje en progreso</h2>
-  <div class="lista-habilidades">
-    <div class="habilidad">
-      <img src="img/logos/node-and-express-js.png" alt="Node.js logo">
-      <span>Node.js y Express.js</span>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="seo.title">
+   Jaider S&aacute;nchez | Desarrollador Web Full Stack
+  </title>
+  <meta content="Portafolio de Jaider S&aacute;nchez, desarrollador web Full Stack. Conoce sus proyectos con Laravel, Angular, JavaScript y PostgreSQL." data-i18n-content="seo.description" name="description"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <div aria-label="Seleccionar idioma del portafolio" class="selector-idioma" data-i18n-aria-label="language.selector" role="group">
+    <button aria-label="Cambiar a espa&ntilde;ol" aria-pressed="true" class="idioma-btn" data-i18n-aria-label="language.es" data-lang="es" lang="es" type="button">
+     ES
+    </button>
+    <button aria-label="Cambiar a ingl&eacute;s" aria-pressed="false" class="idioma-btn" data-i18n-aria-label="language.en" data-lang="en" lang="en" type="button">
+     EN
+    </button>
+   </div>
+   <h1>
+    Jaider Fabi&aacute;n S&aacute;nchez Delgado
+   </h1>
+   <img alt="Fotograf&iacute;a de Jaider S&aacute;nchez" class="foto-perfil" data-i18n-alt="image.profile" src="img/foto-perfil.jpeg"/>
+   <p class="introduccion" data-i18n="intro">
+    Desarrollador web full-stack en formaci&oacute;n con experiencia en proyectos reales del SENA Casanare. Manejo frameworks modernos, bases de datos y control de versiones con GitHub.
+   </p>
+   <p class="nota-importante">
+    <ion-icon aria-hidden="true" name="phone-portrait">
+    </ion-icon>
+    <span data-i18n="notice">
+     *NOTA IMPORTANTE: Podr&aacute;s ver mi portafolio tambi&eacute;n en dispositivos m&oacute;viles.
+    </span>
+   </p>
+  </header>
+  <main id="contenido-principal">
+   <section class="contacto">
+    <h2 data-i18n="contact.heading">
+     Contacto
+    </h2>
+    <ul>
+     <li>
+      <ion-icon aria-hidden="true" name="location">
+      </ion-icon>
+      <strong data-i18n="contact.location_label">
+       Ubicaci&oacute;n:
+      </strong>
+      Yopal, Casanare, Colombia
+     </li>
+     <li>
+      <ion-icon aria-hidden="true" name="mail">
+      </ion-icon>
+      <strong data-i18n="contact.email_label">
+       Email:
+      </strong>
+      <a href="mailto:jaiderfabiansd@gmail.com">
+       jaiderfabiansd@gmail.com
+      </a>
+     </li>
+     <li>
+      <ion-icon aria-hidden="true" name="call">
+      </ion-icon>
+      <strong data-i18n="contact.phone_label">
+       Tel&eacute;fono:
+      </strong>
+      <a data-i18n-whatsapp="contact.whatsapp" href="https://wa.me/573228758896?text=Hola%20Jaider,%20vi%20tu%20portafolio%20web%20y%20me%20gustar&iacute;a%20contactarte." rel="noopener noreferrer" target="_blank">
+       3228758896
+      </a>
+     </li>
+     <li>
+      <ion-icon aria-hidden="true" name="logo-github">
+      </ion-icon>
+      <strong data-i18n="contact.github_label">
+       GitHub:
+      </strong>
+      <a href="https://github.com/JaiderSanchez" rel="noopener noreferrer" target="_blank">
+       JaiderSanchez
+      </a>
+     </li>
+    </ul>
+   </section>
+   <section class="proyectos">
+    <h2 data-i18n="projects.heading">
+     Proyectos destacados
+    </h2>
+    <article>
+     <h3 data-i18n="project.control.title">
+      Control E
+     </h3>
+     <div class="logos-proyectos">
+      <img alt="Control E" data-i18n-alt="project.control.alt" src="img/Logo-Control-E.png"/>
+     </div>
+     <p data-i18n="project.control.description">
+      Aplicaci&oacute;n web desarrollada durante el programa Apoyo de Monitor&iacute;as para gestionar el ingreso y egreso de elementos en el SENA Regional Casanare.
+     </p>
+     <p data-i18n-html="project.control.technologies">
+      <strong>
+       Tecnolog&iacute;as:
+      </strong>
+      Laravel, PHP, PostgreSQL, Bootstrap, Bulma
+     </p>
+     <a data-i18n="project.control.repository" href="https://github.com/Sebas2021herrera/ControlE" rel="noopener noreferrer" target="_blank">
+      Ver repositorio
+     </a>
+     <button aria-controls="modal-control-e" class="btn-detalles" data-i18n="project.control.details_button" onclick="abrirModal('modal-control-e')" type="button">
+      Ver m&aacute;s detalles
+     </button>
+    </article>
+    <!-- Modal oculto por defecto -->
+    <div class="modal" id="modal-control-e">
+     <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal-control-e')">
+       &times;
+      </span>
+      <h3 data-i18n="project.control.modal_title">
+       Control E - Detalles del Proyecto
+      </h3>
+      <ul>
+       <li data-i18n-html="project.control.modal_item_1">
+        <strong>
+         Rol:
+        </strong>
+        Desarrollador backend y soporte en frontend
+       </li>
+       <li data-i18n-html="project.control.modal_item_2">
+        <strong>
+         Duraci&oacute;n:
+        </strong>
+        Julio 2024 - Enero 2025
+       </li>
+       <li data-i18n-html="project.control.modal_item_3">
+        <strong>
+         Mayor desaf&iacute;o:
+        </strong>
+        Garantizar la integridad del proceso de registro de elementos en tiempo real y adaptar funcionalidades a requisitos institucionales.
+       </li>
+       <li data-i18n-html="project.control.modal_item_4">
+        <strong>
+         Lecciones aprendidas:
+        </strong>
+        Trabajo colaborativo, control de versiones en equipo, despliegue en servidor f&iacute;sico.
+       </li>
+      </ul>
+     </div>
     </div>
-    <div class="habilidad">
-      <img src="img/logos/react.png" alt="React logo">
-      <span>React</span>
+    <article>
+     <h3 data-i18n="project.rental.title">
+      Sistema de alquiler de canchas
+     </h3>
+     <div class="logos-proyectos">
+      <img alt="Sistema de alquiler de canchas" data-i18n-alt="project.rental.alt" src="img/Logotipo-proyecto-RC.png"/>
+     </div>
+     <p data-i18n="project.rental.description">
+      Proyecto de grado desarrollado con arquitectura de 3 capas (Frontend, API Middleware, API REST CRUD) para la gesti&oacute;n de reservas de canchas de f&uacute;tbol sint&eacute;ticas.
+     </p>
+     <p data-i18n-html="project.rental.technologies">
+      <strong>
+       Tecnolog&iacute;as:
+      </strong>
+      Angular 19, Gin, PostgreSQL y PWA
+     </p>
+     <ul>
+      <li>
+       <a data-i18n="project.rental.link.0" href="https://github.com/JaiderSanchez/CLIENT_R_C" rel="noopener noreferrer" target="_blank">
+        Frontend (privado)
+       </a>
+      </li>
+      <li>
+       <a data-i18n="project.rental.link.1" href="https://github.com/JaiderSanchez/API_MID_R_C" rel="noopener noreferrer" target="_blank">
+        API Middleware (privado)
+       </a>
+      </li>
+      <li>
+       <a data-i18n="project.rental.link.2" href="https://github.com/JaiderSanchez/API_CRUD_R_C_GO" rel="noopener noreferrer" target="_blank">
+        API CRUD (privado)
+       </a>
+      </li>
+     </ul>
+     <button aria-controls="modal-canchas" class="btn-detalles" data-i18n="project.rental.details_button" onclick="abrirModal('modal-canchas')" type="button">
+      Ver m&aacute;s detalles
+     </button>
+    </article>
+    <!-- Modal oculto por defecto -->
+    <div class="modal" id="modal-canchas">
+     <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal-canchas')">
+       &times;
+      </span>
+      <h3 data-i18n="project.rental.modal_title">
+       Sistema de alquiler de canchas - Detalles del Proyecto
+      </h3>
+      <ul>
+       <li data-i18n-html="project.rental.modal_item_1">
+        <strong>
+         Rol:
+        </strong>
+        Desarrollador web full stack
+       </li>
+       <li data-i18n-html="project.rental.modal_item_2">
+        <strong>
+         Duraci&oacute;n:
+        </strong>
+        Febrero 2025 - Junio 2025
+       </li>
+       <li data-i18n-html="project.rental.modal_item_3">
+        <strong>
+         Mayor desaf&iacute;o:
+        </strong>
+        Aprender a conectar las 3 capas y aprender a enviar peticiones HTTP. Tambi&eacute;n, la conversi&oacute;n de la app web a una PWA.
+       </li>
+       <li data-i18n-html="project.rental.modal_item_4">
+        <strong>
+         Lecciones aprendidas:
+        </strong>
+        Desarrollo Full Stack, dise&ntilde;o UX/UI, metodolog&iacute;a &aacute;gil Scrum y pruebas de APis REST CRUD con Postman
+       </li>
+      </ul>
+     </div>
     </div>
-    <div class="habilidad">
-      <img src="img/logos/flutter.png" alt="Logo de Flutter">
-      <span>Flutter</span>
+    <article>
+     <h3 data-i18n="project.invoice.title">
+      Generador de facturas en PDF
+     </h3>
+     <div class="logos-proyectos">
+      <img alt="Factura PDF Golang" data-i18n-alt="project.invoice.alt" src="img/pdf-golang.png"/>
+     </div>
+     <p data-i18n="project.invoice.description">
+      Programa en Golang para generar facturas en formato PDF para un minimarket. Usa la librer&iacute;a gofpdf.
+     </p>
+     <a data-i18n="project.invoice.repository" href="https://github.com/JaiderSanchez/Programa-Generador-Factura-PDF-Golang/tree/desarrollo-factura" rel="noopener noreferrer" target="_blank">
+      Ver repositorio
+     </a>
+     <button aria-controls="modal-factura" class="btn-detalles" data-i18n="project.invoice.details_button" onclick="abrirModal('modal-factura')" type="button">
+      Ver m&aacute;s detalles
+     </button>
+    </article>
+    <!-- Modal oculto por defecto -->
+    <div class="modal" id="modal-factura">
+     <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal-factura')">
+       &times;
+      </span>
+      <h3 data-i18n="project.invoice.modal_title">
+       Generador de facturas en PDF - Detalles del Proyecto
+      </h3>
+      <ul>
+       <li data-i18n-html="project.invoice.modal_item_1">
+        <strong>
+         Rol:
+        </strong>
+        Desarrollador backend y soporte en frontend
+       </li>
+       <li data-i18n-html="project.invoice.modal_item_2">
+        <strong>
+         Duraci&oacute;n:
+        </strong>
+        Agosto 2024 - Febrero 2025
+       </li>
+       <li data-i18n-html="project.invoice.modal_item_3">
+        <strong>
+         Mayor desaf&iacute;o:
+        </strong>
+        Garantizar la integridad del proceso de registro de elementos en tiempo real y adaptar funcionalidades a requisitos institucionales.
+       </li>
+       <li data-i18n-html="project.invoice.modal_item_4">
+        <strong>
+         Lecciones aprendidas:
+        </strong>
+        Trabajo colaborativo, control de versiones en equipo, despliegue en servidor f&iacute;sico.
+       </li>
+      </ul>
+     </div>
     </div>
-  </div>
-</section>
-    </main>
-
+    <article>
+     <h3 data-i18n="project.faith.title">
+      Encuentro con la verdad
+     </h3>
+     <div class="logos-proyectos">
+      <img alt="Encuentro con la verdad" data-i18n-alt="project.faith.alt" src="img/logo-encuentro-verdad-png.png"/>
+     </div>
+     <p data-i18n="project.faith.description">
+      Una app web que acercar&aacute; a Dios a muchas personas ateas, esc&eacute;pticas y que tienen un coraz&oacute;n duro. Sin imponer, sin obligar y sin ninguna mala intenci&oacute;n, pero s&iacute; hablando con la verdad.
+     </p>
+     <p data-i18n-html="project.faith.technologies">
+      <strong>
+       Tecnolog&iacute;as:
+      </strong>
+      HTML, CSS, JavaScript y CDN Icons.
+     </p>
+     <a data-i18n="project.faith.website" href="https://jaidersanchez.github.io/encuentro-con-la-verdad/" rel="noopener noreferrer" target="_blank">
+      Ver sitio web
+     </a>
+     <button aria-controls="modal-encuentro-verdad" class="btn-detalles" data-i18n="project.faith.details_button" onclick="abrirModal('modal-encuentro-verdad')" type="button">
+      Ver m&aacute;s detalles
+     </button>
+    </article>
+    <!-- Modal oculto por defecto -->
+    <div class="modal" id="modal-encuentro-verdad">
+     <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal-encuentro-verdad')">
+       &times;
+      </span>
+      <h3 data-i18n="project.faith.modal_title">
+       Encuentro con la verdad - Detalles del Proyecto
+      </h3>
+      <ul>
+       <li data-i18n-html="project.faith.modal_item_1">
+        <strong>
+         Rol:
+        </strong>
+        Desarrollador frontend
+       </li>
+       <li data-i18n-html="project.faith.modal_item_2">
+        <strong>
+         Duraci&oacute;n:
+        </strong>
+        Abril 2026 - Presente
+       </li>
+       <li data-i18n-html="project.faith.modal_item_3">
+        <strong>
+         Mayor desaf&iacute;o:
+        </strong>
+        Que seres humanos ateos y con coraz&oacute;n duro reciban a Jes&uacute;s como su Se&ntilde;or y Salvador.
+       </li>
+       <li data-i18n-html="project.faith.modal_item_4">
+        <strong>
+         Lecciones aprendidas:
+        </strong>
+        Dise&ntilde;o UX/UI y comunicaci&oacute;n efectiva de conocimientos b&iacute;blicos.
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <section id="habilidades">
+    <h2>
+     <ion-icon aria-hidden="true" name="star-half">
+     </ion-icon>
+     <span data-i18n="skills.heading">
+      Habilidades
+     </span>
+    </h2>
+    <p class="descripcion-habilidades" data-i18n-html="skills.description">
+     Soy Tecn&oacute;logo en An&aacute;lisis y Desarrollo de Software, con capacidad para optimizar procesos tecnol&oacute;gicos y organizacionales mediante soluciones TIC. Me desempe&ntilde;o como desarrollador web full stack junior, con conocimientos s&oacute;lidos en
+     <strong>
+      HTML, CSS
+     </strong>
+     ,
+     <strong>
+      JavaScript
+     </strong>
+     ,
+     <strong>
+      Python
+     </strong>
+     y
+     <strong>
+      PHP
+     </strong>
+     . Tengo experiencia pr&aacute;ctica con frameworks modernos como
+     <strong>
+      Angular (v19)
+     </strong>
+     ,
+     <strong>
+      React (v19)
+     </strong>
+     ,
+     <strong>
+      Laravel
+     </strong>
+     y
+     <strong>
+      Gin
+     </strong>
+     , y administro bases de datos relacionales con
+     <strong>
+      PostgreSQL
+     </strong>
+     . Utilizo
+     <strong>
+      Git Bash
+     </strong>
+     y
+     <strong>
+      GitHub
+     </strong>
+     para control de versiones y trabajo colaborativo, aplicando metodolog&iacute;as
+     <strong>
+      &aacute;giles
+     </strong>
+     orientadas a la entrega continua de valor.
+    </p>
+    <p class="descripcion-habilidades" data-i18n="skills.experience">
+     Tambi&eacute;n he participado en el desarrollo de aplicaciones web reales para el SENA Regional Casanare, como una plataforma de control de ingreso y otra de gesti&oacute;n de alquiler de canchas con arquitectura de tres capas.
+    </p>
+    <p class="descripcion-habilidades" data-i18n="skills.english">
+     Manejo buen ingl&eacute;s t&eacute;cnico en desarrollo de software.
+    </p>
+    <div class="grupos-habilidades">
+     <section aria-labelledby="grupo-frontend" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.frontend" id="grupo-frontend">
+       Desarrollo frontend
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/HTML5.png"/>
+        <span>
+         HTML
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/css.png"/>
+        <span>
+         CSS
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-languages" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.languages" id="grupo-languages">
+       Lenguajes de programaci&oacute;n
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/javascript.png"/>
+        <span>
+         JavaScript
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/python-logo.svg.webp"/>
+        <span>
+         Python
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/php.png"/>
+        <span>
+         PHP
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/golang.png"/>
+        <span>
+         Go
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-frameworks" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.frameworks" id="grupo-frameworks">
+       Frameworks y bibliotecas
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/react-logo.svg.webp"/>
+        <span>
+         React
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/angular.png"/>
+        <span>
+         Angular
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/laravel.png"/>
+        <span>
+         Laravel
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/gin.jpeg"/>
+        <span>
+         Gin
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-data" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.data" id="grupo-data">
+       Bases de datos y administraci&oacute;n
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/postgresql.png"/>
+        <span>
+         PostgreSQL
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/pgadmin.png"/>
+        <span>
+         pgAdmin 4
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-version" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.version" id="grupo-version">
+       Herramientas de desarrollo y versiones
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/git-bash.jpeg"/>
+        <span>
+         Git Bash
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/github.png"/>
+        <span>
+         GitHub
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-agile" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.agile" id="grupo-agile">
+       Metodolog&iacute;as &aacute;giles
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/scrum.jpg"/>
+        <span>
+         Scrum
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-design" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.design" id="grupo-design">
+       Dise&ntilde;o UI/UX
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/figma.png"/>
+        <span>
+         Figma
+        </span>
+       </div>
+      </div>
+     </section>
+     <section aria-labelledby="grupo-api" class="grupo-habilidades">
+      <h3 data-i18n="skills.group.api" id="grupo-api">
+       Pruebas de API
+      </h3>
+      <div class="lista-habilidades">
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/postman.png"/>
+        <span>
+         Postman
+        </span>
+       </div>
+       <div class="habilidad">
+        <img alt="" loading="lazy" src="img/logos/thunder-client.png"/>
+        <span>
+         Thunder Client
+        </span>
+       </div>
+      </div>
+     </section>
+    </div>
+   </section>
+   <section class="en-progreso">
+    <h2>
+     <ion-icon aria-hidden="true" name="flash">
+     </ion-icon>
+     <span data-i18n="learning.heading">
+      Aprendizaje en progreso
+     </span>
+    </h2>
+    <div class="lista-habilidades">
+     <div class="habilidad">
+      <img alt="Node.js logo" src="img/logos/node-and-express-js.png"/>
+      <span data-i18n="learning.node">
+       Node.js y Express.js
+      </span>
+     </div>
+     <div class="habilidad">
+      <img alt="Logo de Flutter" src="img/logos/flutter.png"/>
+      <span>
+       Flutter
+      </span>
+     </div>
+     <div class="habilidad">
+      <img alt="Logo de AWS Cloud" data-i18n-alt="learning.aws_alt" src="img/logos/aws-cloud.png"/>
+      <span>
+       AWS Cloud
+      </span>
+     </div>
+    </div>
+   </section>
+  </main>
   <footer>
-    <p>&copy; 2026 Jaider Sánchez. Portafolio personal.</p>
+   <p data-i18n="footer">
+    &copy; 2026 Jaider S&aacute;nchez. Portafolio personal.
+   </p>
   </footer>
-
-    <!-- Modal -->
-    <div class="modal" id="modal-img">
-        <span class="modal-close" id="modal-close">&times;</span>
-        <img src="" alt="Imagen ampliada" id="modal-img-content" />
-    </div>
-
-<script src="script.js"></script>
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-</body>
+  <!-- Modal -->
+  <div class="modal" id="modal-img">
+   <span class="modal-close" id="modal-close">
+    &times;
+   </span>
+   <img alt="Imagen ampliada" data-i18n-alt="image.enlarged" id="modal-img-content" src="">
+   </img>
+  </div>
+  <script src="script.js">
+  </script>
+  <script defer="True" src="lang.js">
+  </script>
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module">
+  </script>
+  <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+  </script>
+ </body>
 </html>
